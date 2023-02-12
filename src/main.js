@@ -7,7 +7,8 @@ import TheHome from "./components/TheHome.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", redirect: "/home" },
+    { path: "/RedBerry", redirect: "/home" },
+    // { path: "/", redirect: "/home" },
     { path: "/home", component: TheHome },
   ],
 });
