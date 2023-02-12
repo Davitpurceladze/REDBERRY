@@ -1,8 +1,21 @@
-<script setup></script>
-
 <template>
-  <h1>HEllolokoasjkdoikahsd</h1>
-  <h2>Hello again</h2>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
-<style scoped></style>
+<script>
+export default {};
+</script>
+
+<style>
+body {
+  width: 1920px;
+  height: 1080px;
+}
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("./fonts/HelveticaNeue-01.ttf");
+}
+</style>
