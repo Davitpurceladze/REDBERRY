@@ -8,7 +8,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/RedBerry", redirect: "/home" },
-    // { path: "/", redirect: "/home" },
+    { path: "/", redirect: "/home" },
     { path: "/home", component: TheHome },
   ],
 });
