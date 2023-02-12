@@ -137,13 +137,11 @@
 </template>
 
 <script>
-import TheLine from '../components/TheLine.vue';
-import TheResume from '../components/TheResume.vue';
+import TheLine from "../components/TheLine.vue";
 
 export default {
   components: {
     TheLine,
-    TheResume,
   },
   data() {
     return {
@@ -159,12 +157,12 @@ export default {
       },
 
       validation: {
-        userNameVailidity: 'pending',
-        surnameValidity: 'pending',
-        emailValidity: 'pending',
-        phoneNumberValidity: 'pending',
-        positionValidity: 'pending',
-        employerValidity: 'pending',
+        userNameVailidity: "pending",
+        surnameValidity: "pending",
+        emailValidity: "pending",
+        phoneNumberValidity: "pending",
+        positionValidity: "pending",
+        employerValidity: "pending",
       },
 
       imagePreview: null,
@@ -187,36 +185,36 @@ export default {
         };
         reader.readAsDataURL(file[0]);
 
-        this.$emit('input', file[0]);
+        this.$emit("input", file[0]);
       }
     },
     validateAboutMe() {
       if (this.resume.aboutme) {
-        localStorage.setItem('aboutme', this.resume.aboutme);
+        localStorage.setItem("aboutme", this.resume.aboutme);
       }
     },
     validateUserName() {
       if (this.resume.userName?.match(/^[\u10A0-\u10FF]{2,}$/)) {
-        this.validation.userNameVailidity = 'valid';
-        localStorage.setItem('userName', this.resume.userName);
+        this.validation.userNameVailidity = "valid";
+        localStorage.setItem("userName", this.resume.userName);
       } else {
-        this.validation.userNameVailidity = 'invalid';
+        this.validation.userNameVailidity = "invalid";
       }
     },
     validateSurname() {
       if (this.resume.surname.match(/^[\u10A0-\u10FF]{2,}$/)) {
-        this.validation.surnameValidity = 'valid';
-        localStorage.setItem('surname', this.resume.surname);
+        this.validation.surnameValidity = "valid";
+        localStorage.setItem("surname", this.resume.surname);
       } else {
-        this.validation.surnameValidity = 'invalid';
+        this.validation.surnameValidity = "invalid";
       }
     },
     validateEmail() {
       if (this.resume.email.match(/^[a-zA-Z0-9.]+@redberry.ge$/)) {
-        this.validation.emailValidity = 'valid';
-        localStorage.setItem('email', this.resume.email);
+        this.validation.emailValidity = "valid";
+        localStorage.setItem("email", this.resume.email);
       } else {
-        this.validation.emailValidity = 'invalid';
+        this.validation.emailValidity = "invalid";
       }
     },
     validatePhoneNumber() {
@@ -225,10 +223,10 @@ export default {
           /^[+][9][9][5][0-9]{3}[0-9]{2}[0-9]{2}[0-9]{2}$/
         )
       ) {
-        this.validation.phoneNumberValidity = 'valid';
-        localStorage.setItem('phoneNumber', this.resume.phoneNumber);
+        this.validation.phoneNumberValidity = "valid";
+        localStorage.setItem("phoneNumber", this.resume.phoneNumber);
       } else {
-        this.validation.phoneNumberValidity = 'invalid';
+        this.validation.phoneNumberValidity = "invalid";
       }
     },
   },
@@ -236,20 +234,20 @@ export default {
 </script>
 
 <style scoped>
-@import '../css/personal/phoneNumber.css';
-@import '../css/personal/email.css';
-@import '../css/personal/aboutMe.css';
-@import '../css/personal/userName.css';
-@import '../css/personal/surname.css';
-@import '../css/personal/uploadFile.css';
-@import '../css/personal/nextToExperience.css';
-@import '../css/personal/personalTitle.css';
-@import '../css/personal/pageNumber.css';
-@import '../css/personal/homeButton.css';
+@import "../css/personal/phoneNumber.css";
+@import "../css/personal/email.css";
+@import "../css/personal/aboutMe.css";
+@import "../css/personal/userName.css";
+@import "../css/personal/surname.css";
+@import "../css/personal/uploadFile.css";
+@import "../css/personal/nextToExperience.css";
+@import "../css/personal/personalTitle.css";
+@import "../css/personal/pageNumber.css";
+@import "../css/personal/homeButton.css";
 
 .phoneNumber.valid input {
   border-color: #98e37e;
-  background: url('../assets/validLogo.jpg') no-repeat scroll 760.75px 11.75px;
+  background: url("../assets/validLogo.jpg") no-repeat scroll 760.75px 11.75px;
 }
 
 .phoneNumber.invalid input {
@@ -267,7 +265,7 @@ export default {
 }
 .email.valid input {
   border-color: #98e37e;
-  background: url('../assets/validLogo.jpg') no-repeat scroll 760.75px 11.75px;
+  background: url("../assets/validLogo.jpg") no-repeat scroll 760.75px 11.75px;
 }
 .email.invalid input {
   border-color: #ef5050;
@@ -287,26 +285,26 @@ export default {
 }
 .surname.valid input {
   border-color: #98e37e;
-  background: url('../assets/validLogo.jpg') no-repeat scroll 339.75px 11.75px;
+  background: url("../assets/validLogo.jpg") no-repeat scroll 339.75px 11.75px;
 }
 .user-name.invalid input {
   border-color: #ef5050;
 }
 .user-name.valid input {
   border-color: #98e37e;
-  background: url('../assets/validLogo.jpg') no-repeat scroll 339.75px 11.75px;
+  background: url("../assets/validLogo.jpg") no-repeat scroll 339.75px 11.75px;
 }
 
 .hidden {
   display: none;
 }
 
-[placeholder=' მუმლაძე'],
-[placeholder=' ანზორ'],
-[placeholder=' ზოგადი ინფო შენ შესახებ'],
-[placeholder=' anzorr666@redberry.ge'],
-[placeholder=' +995 551 12 34 56'] {
-  font-family: 'HelveticaNeue';
+[placeholder=" მუმლაძე"],
+[placeholder=" ანზორ"],
+[placeholder=" ზოგადი ინფო შენ შესახებ"],
+[placeholder=" anzorr666@redberry.ge"],
+[placeholder=" +995 551 12 34 56"] {
+  font-family: "HelveticaNeue";
   font-size: 16px;
   font-weight: 400;
   left: 16px;

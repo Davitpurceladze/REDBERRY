@@ -9,7 +9,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/RedBerry", component: TheHome },
-    { path: "/RedBerry/pagepersonal", component: pagePersonal },
+    { path: "/pagepersonal", component: pagePersonal },
   ],
 });
 const app = createApp(App);

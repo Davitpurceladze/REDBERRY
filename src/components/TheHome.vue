@@ -5,7 +5,7 @@
   <img src="../assets/digitalLogo.jpg" class="digitalLogo" />
 
   <div>
-    <router-link to="/pagePersonal">
+    <router-link to="/pagepersonal">
       <div class="text">რეზიუმეს დამატება</div>
     </router-link>
   </div>
